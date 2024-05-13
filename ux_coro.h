@@ -121,7 +121,7 @@ void ux_coro_yield(ux_coro_handle* h){
     get_curr_ctx(h)->st = CORO_PENDING;
 #if _WIN32
     SwitchToFiber(get_other_ctx(h)->context);
-#elif __linux_
+#elif __linux__
   swapcontext(&get_curr_ctx(h)->context,&get_other_ctx(h)->context);
 #endif
 }
