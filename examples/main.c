@@ -17,7 +17,7 @@ int main(){
   ux_coro_handle* h = ux_coro_init((CoroCallback)print_10_times,get_curr_ctx(mm),NULL); 
   
   ux_coro_next(h);
-  ux_coro_next(h);
+  // ux_coro_next(h);
   
   printf("MEOW \n");
   return 0;
